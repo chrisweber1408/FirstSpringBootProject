@@ -1,25 +1,42 @@
 package de.neuefische.firstspringbootproject;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.UUID;
+
 public class Student {
 
-    private final String firstName;
-    private final String lastName;
-    private final int age;
+    private final String id = UUID.randomUUID().toString();
+    private String lastname;
+    private String firstname;
 
-    public Student(String firstName, String lastName, int age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-    }
-    public String getFirstName() {
-        return firstName;
+    public Student(String lastname, String firstname) {
+        this.lastname = lastname;
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getId() {
+        return id;
     }
 
-    public int getAge() {
-        return age;
+    public String getLastname() {
+        return lastname;
     }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getFullname() {
+        return firstname + " " + lastname;
+    }
+
 }
