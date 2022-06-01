@@ -1,4 +1,4 @@
-package de.neuefische.firstspringbootproject;
+package de.neuefische.firstspringbootproject.students;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

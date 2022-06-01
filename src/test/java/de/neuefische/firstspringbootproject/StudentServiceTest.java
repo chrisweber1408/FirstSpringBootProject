@@ -1,15 +1,16 @@
 package de.neuefische.firstspringbootproject;
 
+import de.neuefische.firstspringbootproject.students.Student;
+import de.neuefische.firstspringbootproject.students.StudentRepository;
+import de.neuefische.firstspringbootproject.students.StudentService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 class StudentServiceTest {
